@@ -21,6 +21,7 @@ export default async function handler(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url)
     const decodedurl = decodeURI(searchParams.get('imageurl'))
+    const eventDate = searchParams.get('date')
 
     // ?title=<title>
     const hasTitle = searchParams.has('title')
@@ -46,8 +47,8 @@ export default async function handler(req: NextRequest) {
             justifyContent: 'flex-start',
             flexDirection: 'row',
             flexWrap: 'wrap',
-            padding: '40px',
-            backgroundColor: 'white'
+            backgroundColor: 'white',
+            padding: 40
 
          
           }}
@@ -87,6 +88,22 @@ export default async function handler(req: NextRequest) {
           >
            {title2}
           </span>
+          <div 
+          style={{
+              fontSize: 40,
+              backgroundColor: '#e7e5e1',
+              fontStyle: 'normal', 
+               fontFamily: 'Cerial',
+              color: 'black',
+              lineHeight: 1.1,
+              textAlign: 'right',
+              position: 'absolute',
+              bottom: 0,
+              right: 0,
+              padding: 30
+            }}>{eventDate}
+
+          </div>
         </div>
 
       ),
