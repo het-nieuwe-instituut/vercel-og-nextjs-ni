@@ -26,8 +26,8 @@
         ? searchParams.get('title')?.slice(0, 100)
         : 'My default title'
 
-        const title1 = title.slice(0, title.length/2)
-        const title2 = title.slice(title.length/2)
+        const title1 = title.slice(0, title.length/1.8)
+        const title2 = title.slice(title.length/1.8)
 
       return new ImageResponse(
         (
@@ -49,7 +49,7 @@
          
             <span
               style={{
-                fontSize: 60,
+                fontSize: 90,
                 fontStyle: 'normal',
                 fontFamily: 'ImpactNieuw',
                 color: 'black',
@@ -60,12 +60,12 @@
             </span>
             <span
               style={{
-                fontSize: 70,
+                fontSize: 110,
                 fontStyle: 'normal', 
                  fontFamily: 'Cerial',
                 color: 'black',
                 lineHeight: 1.6,
-                marginTop: "-15px"
+                marginTop: "-28px"
 
               }}
             >
