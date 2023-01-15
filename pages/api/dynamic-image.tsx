@@ -7,9 +7,11 @@ export const config = {
 
 export default async function handler(req: NextRequest) {
   const { searchParams } = req.nextUrl
-  const username = searchParams.get('username')
-  if (!username) {
-    return new ImageResponse(<>{'Visit with "?username=vercel"'}</>, {
+  const decodedurl = decodeURI(searchParams.get('imageurl'))
+
+
+  if (!decodedurl) {
+    return new ImageResponse(<>{'Visit with "?imageurl=yourimageurl"'}</>, {
       width: 1200,
       height: 630,
     })
@@ -34,13 +36,9 @@ export default async function handler(req: NextRequest) {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           alt="avatar"
-          width="256"
-          src={`https://github.com/${username}.png`}
-          style={{
-            borderRadius: 128,
-          }}
+          src={decodedurl}
         />
-        <p>github.com/{username}</p>
+        <p>check it out</p>
       </div>
     ),
     {
