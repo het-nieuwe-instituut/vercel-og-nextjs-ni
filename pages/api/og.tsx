@@ -60,12 +60,12 @@
             </span>
             <span
               style={{
-                fontSize: 110,
+                fontSize: 104,
                 fontStyle: 'normal', 
                  fontFamily: 'Cerial',
                 color: 'black',
                 lineHeight: 1.6,
-                marginTop: "-28px"
+                marginTop: "-25px"
 
               }}
             >
