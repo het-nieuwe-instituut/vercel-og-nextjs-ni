@@ -17,8 +17,10 @@
   export default async function handler(req: NextRequest) {
     const font1Data = await font1
     const font2Data = await font2
+
     try {
       const { searchParams } = new URL(req.url)
+      const decodedurl = decodeURI(searchParams.get('imageurl'))
 
       // ?title=<title>
       const hasTitle = searchParams.has('title')
@@ -31,14 +33,14 @@
 
       return new ImageResponse(
         (
+          
           <div
             style={{
               backgroundColor: '#e7e5e1',
-              backgroundSize: '150px 150px',
               height: '100%',
               width: '100%',
               display: 'flex',
-              textAlign: 'center',
+              textAlign: 'left',
               alignItems: 'flex-start',
               justifyContent: 'flex-start',
               flexDirection: 'row',
@@ -46,27 +48,26 @@
               padding: '40px'
             }}
           >
-         
             <span
               style={{
-                fontSize: 90,
+                fontSize: 60,
                 fontStyle: 'normal',
                 fontFamily: 'ImpactNieuw',
                 color: 'black',
-                lineHeight: 1.4,
+                lineHeight: 1.1,
+              
               }}
             >
              {title1}
             </span>
             <span
               style={{
-                fontSize: 104,
+                fontSize: 71,
                 fontStyle: 'normal', 
                  fontFamily: 'Cerial',
                 color: 'black',
-                lineHeight: 1.6,
-                marginTop: "-25px"
-
+                lineHeight: 1.1,
+                transform: "translateY(-11px)"
               }}
             >
              {title2}
