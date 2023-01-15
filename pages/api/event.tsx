@@ -1,6 +1,8 @@
 import { ImageResponse } from '@vercel/og'
 import { NextRequest } from 'next/server'
 
+const rndInt = Math.floor(Math.random() * 6) + 1.4
+
 
 export const config = {
   runtime: 'edge',
@@ -30,8 +32,8 @@ export default async function handler(req: NextRequest) {
       ? searchParams.get('title')?.slice(0, 100)
       : 'My default title'
 
-      const title1 = title.slice(0, title.length/1.8)
-      const title2 = title.slice(title.length/1.8)
+      const title1 = title.slice(0, title.length/rndInt)
+      const title2 = title.slice(title.length/rndInt)
 
     return new ImageResponse(
       (
