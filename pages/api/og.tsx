@@ -39,45 +39,33 @@
               width: '100%',
               display: 'flex',
               textAlign: 'center',
-              alignItems: 'center',
-              justifyContent: 'center',
+              alignItems: 'flex-start',
+              justifyContent: 'flex-start',
               flexDirection: 'row',
-              flexWrap: 'nowrap',
+              flexWrap: 'wrap',
+              padding: '40px'
             }}
           >
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                alignContent: 'flex-start',
-                justifyContent: 'center',
-                justifyItems: 'center',
-              }}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-          
-            </div>
+         
             <span
               style={{
                 fontSize: 60,
                 fontStyle: 'normal',
-                letterSpacing: '-0.025em',
                 fontFamily: 'ImpactNieuw',
                 color: 'black',
                 lineHeight: 1.4,
-
               }}
             >
              {title1}
             </span>
             <span
               style={{
-                fontSize: 80,
-                fontStyle: 'normal',
-                letterSpacing: '-0.025em',
+                fontSize: 70,
+                fontStyle: 'normal', 
                  fontFamily: 'Cerial',
                 color: 'black',
                 lineHeight: 1.6,
+                marginTop: "-15px"
 
               }}
             >
